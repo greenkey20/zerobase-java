@@ -1,3 +1,6 @@
+# .gitignore 파일: 여기에 등록되는 폴더나 파일은 git으로 관리되지 않음
+# .gitignore 파일의 주석
+
 # Compiled class file
 *.class
 
@@ -21,3 +24,8 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# 2022. 8월 은영 추가
+# IntelliJ 설정 관련 파일은
+*.iml
+/datastructure/src/linear/array

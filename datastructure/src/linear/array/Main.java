@@ -1,4 +1,4 @@
-package linear.array;
+package datastructure.src.linear.array;
 
 // 선형 자료구조 - 배열
 

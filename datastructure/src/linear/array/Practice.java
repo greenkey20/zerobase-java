@@ -1,4 +1,4 @@
-package linear.array;
+package datastructure.src.linear.array;
 
 // Practice
 // 기본 배열 자료형을 이용한 배열의 생성, 삽입, 삭제 기능 구현
@@ -51,4 +51,3 @@ public class Practice {
 //        myArray.removeData(99); // 해당 데이터가 없습니다.
     }
 }
-
