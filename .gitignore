@@ -28,4 +28,5 @@ hs_err_pid*
 # 2022. 8월 은영 추가
 # IntelliJ 설정 관련 파일은
 *.iml
-/datastructure/src/linear/array
+/zerobase/zerobase-java/datastructure/src/linear/array
+/zerobase/zerobase-java/codingtest/src/zb

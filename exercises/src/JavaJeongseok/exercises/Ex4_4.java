@@ -9,7 +9,7 @@ public class Ex4_4 {
             if (i % 2 == 1) { // i가 홀수인 경우
                 sum += i;
             } else { // i가 짝수인 경우
-                sum += -i;
+                sum -= i;
             }
 
             if (sum >= 100) {
