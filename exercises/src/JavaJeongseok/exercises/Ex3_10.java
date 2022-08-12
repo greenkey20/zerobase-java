@@ -15,7 +15,10 @@ public class Ex3_10 {
             if (ch != '0') {
 //                char lowerCase = ('A' <= ch && ch <= 'Z') && !(0 <= ch && ch <= 64) && !(91 <= ch && ch <= 96) && !(123 <= ch && ch <= 127) ? ch += 32 : ch;
 //                char lowerCase = 'A' <= ch && ch <= 'Z' ? ch += 32 : ch; // 내가 의도한대로 나오지 않음
-                char lowerCase = (char)('A' <= ch && ch <= 'Z' ? ch + 32 : ch);
+                // 나의 답안
+//                char lowerCase = (char)('A' <= ch && ch <= 'Z' ? ch + 32 : ch);
+                // 저자 답안
+                char lowerCase = 'A' <= ch && ch <= 'Z' ? (char)(ch + 32) : ch;
 
                 System.out.println("ch = " + ch);
                 System.out.println("ch to lowerCase = " + lowerCase);

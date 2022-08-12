@@ -9,7 +9,7 @@ public class Ex3_9 {
 
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
+        while (true) { // git commit/push 시 warning = 'while문을 마치려면 예외 처리가 필요하다' -> 예외 처리를 어떻게 해야 할까?
             System.out.print("영문자/숫자/한글 등 글자 1개를 입력해 보세요 > ");
             char ch = sc.nextLine().charAt(0);
 
