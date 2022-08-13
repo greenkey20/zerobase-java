@@ -32,10 +32,10 @@ public class Ex4_10 {
             num = num / 10;
 
             if (num == 0) { // IntelliJ의 suggestion에 따라, num <= 0이라고 조건식 작성했던 것을 ==(equality)로 바꿈
-                break;
+                break; // 2022.8.14(일) 0h45 나의 질문 = 'conditional break inside infinite loop'에 대해 IntelliJ는 왜 경고(warning)를 띄울까?
             }
         }
 
-        System.out.println("sum = " + sum);
+        System.out.print("sum = " + sum); // sum = 15
     }
 }

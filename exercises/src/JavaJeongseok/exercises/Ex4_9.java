@@ -29,8 +29,9 @@ public class Ex4_9 {
             } else {
                 System.out.print("== 프로그램을 종료합니다 ==");
                 sc.close();
-                return;
+//                return;
+                break; // 가장 가까운 반복문을 빠져나가게 하므로, while(true) 무한 반복문을 빠져나감
             }
-        }
+        } // while문 영역 끝
     }
 }

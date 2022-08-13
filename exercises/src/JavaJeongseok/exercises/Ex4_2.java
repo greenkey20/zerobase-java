@@ -13,6 +13,6 @@ public class Ex4_2 {
             }
         }
 
-        System.out.println("1~20 정수 중 2 또는 3의 배수가 아닌 수의 총합 = " + sum);
+        System.out.println("1~20 정수 중 2 또는 3의 배수가 아닌 수의 총합 = " + sum); // 73
     }
 }
