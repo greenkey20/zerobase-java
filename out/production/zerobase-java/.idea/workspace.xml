@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="feat: add study codes of Java exercises_zb examples">
+      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex6_6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_7.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_8.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_9.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_11.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_7.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_8.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_9.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/zb/Example1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/zb/Example1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/zb/example2/Example2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/zb/example2/Example2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CvxAhicxZjrFY1iLaoui6kTMyB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/greenpianorabbit/zerobase/zerobase-java&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.13566351&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exercises/src/zb/example2" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="exercises.src.JavaJeongseok.exercises.ch4" />
+      <recent name="exercises.src.JavaJeongseok.exercises.ch3" />
+      <recent name="exercises.src.zb.example2" />
+      <recent name="exercises.src.JavaJeongseok.exercises" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exercises.src.JavaJeongseok.exercises" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Calendar_maxDays1">
+    <configuration name="Calendar_maxDays1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.codesquad.calendar.Calendar_maxDays1" />
+      <module name="zerobase-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.src.codesquad.calendar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex4_12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.JavaJeongseok.exercises.ch4.Ex4_12" />
+      <module name="zerobase-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.src.JavaJeongseok.exercises.ch3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex4_13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.JavaJeongseok.exercises.ch4.Ex4_13" />
+      <module name="zerobase-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.src.JavaJeongseok.exercises.ch4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.zb.Example1" />
+      <module name="zerobase-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.src.zb.example2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.zb.example2.Example2" />
+      <module name="zerobase-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.src.zb.example2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Calendar_maxDays1" />
+        <item itemvalue="Application.Ex4_13" />
+        <item itemvalue="Application.Ex4_12" />
+        <item itemvalue="Application.Example2" />
+        <item itemvalue="Application.Example1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="" />
+      <created>1659696717701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659696717701</updated>
+      <workItem from="1659696720483" duration="34000" />
+      <workItem from="1659696880859" duration="212000" />
+      <workItem from="1659704604378" duration="135000" />
+      <workItem from="1659963908698" duration="7355000" />
+      <workItem from="1660051321250" duration="3561000" />
+      <workItem from="1660133512615" duration="9762000" />
+      <workItem from="1660144059449" duration="7047000" />
+      <workItem from="1660187121173" duration="25760000" />
+      <workItem from="1660371431396" duration="7602000" />
+      <workItem from="1660387304602" duration="6495000" />
+      <workItem from="1660402662922" duration="6657000" />
+      <workItem from="1660439007288" duration="585000" />
+      <workItem from="1660483421341" duration="8994000" />
+      <workItem from="1660538091425" duration="5027000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix: update .gitignore&#10;feat: add study codes of Java exercices_ch3">
+      <created>1659970225086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659970225086</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add study codes of Java exercises_ch3, ch4">
+      <created>1660056562394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660056562394</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: add study codes of Java exercises_ch4">
+      <created>1660143543510</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660143543510</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add study codes of Java exercises_ch3">
+      <created>1660152385615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660152385615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add study codes of Java exercises_ch3(final), ch4">
+      <created>1660315393001</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660315393001</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add study codes of Java exercises_zb examples">
+      <created>1660405598702</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660405598703</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: update .gitignore&#10;feat: add study codes of Java exercices_ch3" />
+    <MESSAGE value="feat: add study codes of Java exercises_ch3, ch4" />
+    <MESSAGE value="feat: add study codes of Java exercises_ch4" />
+    <MESSAGE value="feat: add study codes of Java exercises_ch3" />
+    <MESSAGE value="feat: add study codes of Java exercises_ch3(final), ch4" />
+    <MESSAGE value="feat: add study codes of Java exercises_zb examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add study codes of Java exercises_zb examples" />
+  </component>
+</project>
