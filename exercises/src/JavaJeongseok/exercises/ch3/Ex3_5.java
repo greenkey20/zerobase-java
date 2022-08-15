@@ -1,11 +1,10 @@
-package exercises.src.JavaJeongseok.exercises;
+package exercises.src.JavaJeongseok.exercises.ch3;
 
 import java.util.Scanner;
 
-// 2022.8.9(화) 0h55
-public class Ex3_4 {
+// 2022.8.9(화) 1h5
+public class Ex3_5 {
     public static void main(String[] args) {
-//        int num = 456;
         Scanner sc = new Scanner(System.in);
 
         while (true) {
@@ -14,7 +13,7 @@ public class Ex3_4 {
             int num = sc.nextInt();
 
             if (num != 0) {
-                System.out.println(num - num % 100);
+                System.out.println(num - num % 10 + 1);
             } else {
                 System.out.println("== 프로그램을 종료합니다 ==");
                 return;

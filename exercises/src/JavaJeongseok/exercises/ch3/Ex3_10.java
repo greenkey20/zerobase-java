@@ -1,4 +1,4 @@
-package exercises.src.JavaJeongseok.exercises;
+package exercises.src.JavaJeongseok.exercises.ch3;
 
 import java.util.Scanner;
 

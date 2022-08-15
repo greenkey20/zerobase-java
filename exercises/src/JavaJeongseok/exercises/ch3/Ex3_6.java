@@ -1,9 +1,9 @@
-package exercises.src.JavaJeongseok.exercises;
+package exercises.src.JavaJeongseok.exercises.ch3;
 
 import java.util.Scanner;
 
-// 2022.8.9(화) 1h5
-public class Ex3_5 {
+// 2022.8.9(화) 1h20
+public class Ex3_6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -13,7 +13,12 @@ public class Ex3_5 {
             int num = sc.nextInt();
 
             if (num != 0) {
-                System.out.println(num - num % 10 + 1);
+                if (num % 10 != 0) {
+                    System.out.println("코드1 = " + ((num / 10 + 1) * 10 - num));
+                    System.out.println("코드2 = " + (10 - num % 10));
+                } else {
+                    System.out.println(10);
+                }
             } else {
                 System.out.println("== 프로그램을 종료합니다 ==");
                 return;

@@ -1,4 +1,4 @@
-package exercises.src.JavaJeongseok.exercises;
+package exercises.src.JavaJeongseok.exercises.ch4;
 
 // 2022.8.13(토) 1h20
 // Fibonnaci 수열의 10번째 수 구하기
