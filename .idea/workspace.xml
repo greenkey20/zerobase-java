@@ -1,47 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="feat: add study codes of Java exercises_zb examples">
-      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codingtest/src/zb/w2_q4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex6_6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_12.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_13.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/codesquad/calendar/Calendar_maxDays1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/codesquad/calendar/Calendar_maxDays2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/codesquad/calendar/Calendar_maxDays3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/codesquad/calendar/Calendar_maxDays4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/codesquad/calendar/Sum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/zb/Mini1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/zb/Mini2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/zb/Mini3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/src/zb/Mini8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_7.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_8.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex3_9.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch3/Ex3_9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_11.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_7.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_8.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/Ex4_9.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/zb/Example1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/zb/Example1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/zb/example2/Example2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/zb/example2/Example2.java" afterDir="false" />
+    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="feat: add zb examples and work">
+      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/common/MenuGuide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_13.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_13.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +60,13 @@
       <recent name="exercises.src.JavaJeongseok.exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mini3">
-    <configuration name="Calendar_maxDays4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercises.src.codesquad.calendar.Calendar_maxDays4" />
+  <component name="RunManager" selected="Application.Ex4_13">
+    <configuration name="Ex4_13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.JavaJeongseok.exercises.ch4.Ex4_13" />
       <module name="zerobase-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercises.src.codesquad.calendar.*" />
+          <option name="PATTERN" value="exercises.src.JavaJeongseok.exercises.ch4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex4_13" />
         <item itemvalue="Application.Mini3" />
         <item itemvalue="Application.Mini2" />
         <item itemvalue="Application.Mini8" />
         <item itemvalue="Application.Example1" />
-        <item itemvalue="Application.Calendar_maxDays4" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +157,7 @@
       <workItem from="1660402662922" duration="6657000" />
       <workItem from="1660439007288" duration="585000" />
       <workItem from="1660483421341" duration="8994000" />
-      <workItem from="1660538091425" duration="21261000" />
+      <workItem from="1660538091425" duration="26185000" />
     </task>
     <task id="LOCAL-00001" summary="fix: update .gitignore&#10;feat: add study codes of Java exercices_ch3">
       <created>1659970225086</created>
@@ -238,7 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660405598703</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: add zb examples and work">
+      <created>1660575120248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660575120248</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: add zb examples and work">
+      <created>1660575143081</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660575143081</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +239,7 @@
     <MESSAGE value="feat: add study codes of Java exercises_ch3" />
     <MESSAGE value="feat: add study codes of Java exercises_ch3(final), ch4" />
     <MESSAGE value="feat: add study codes of Java exercises_zb examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add study codes of Java exercises_zb examples" />
+    <MESSAGE value="feat: add zb examples and work" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add zb examples and work" />
   </component>
 </project>
