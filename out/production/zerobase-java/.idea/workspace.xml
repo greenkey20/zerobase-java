@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="fix: update zb examples/work and Java exercises">
+    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="fix: update an exercise of conditions">
+      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch9/Ex9_3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,7 @@
       <recent name="exercises.src.JavaJeongseok.exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Ex4_13">
+  <component name="RunManager" selected="Application.Ex9_3">
     <configuration name="Ex4_13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exercises.src.JavaJeongseok.exercises.ch4.Ex4_13" />
       <module name="zerobase-java" />
@@ -72,12 +73,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercises.src.zb.Example1" />
+    <configuration name="Ex9_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.src.JavaJeongseok.exercises.ch9.Ex9_3" />
       <module name="zerobase-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercises.src.zb.*" />
+          <option name="PATTERN" value="exercises.src.JavaJeongseok.exercises.ch9.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex9_3" />
         <item itemvalue="Application.Ex4_13" />
         <item itemvalue="Application.Mini3" />
         <item itemvalue="Application.Mini2" />
         <item itemvalue="Application.Mini8" />
-        <item itemvalue="Application.Example1" />
       </list>
     </recent_temporary>
   </component>
@@ -159,6 +160,9 @@
       <workItem from="1660661907262" duration="542000" />
       <workItem from="1660701888035" duration="198000" />
       <workItem from="1660855760341" duration="1396000" />
+      <workItem from="1661093717162" duration="2207000" />
+      <workItem from="1661179726869" duration="983000" />
+      <workItem from="1661339668472" duration="645000" />
     </task>
     <task id="LOCAL-00001" summary="fix: update .gitignore&#10;feat: add study codes of Java exercices_ch3">
       <created>1659970225086</created>
@@ -223,7 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660661964129</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add study codes of conditions">
+      <created>1661093984123</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661093984123</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: update an exercise of conditions">
+      <created>1661180150345</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661180150345</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +267,8 @@
     <MESSAGE value="feat: add study codes of Java exercises_zb examples" />
     <MESSAGE value="feat: add zb examples and work" />
     <MESSAGE value="fix: update zb examples/work and Java exercises" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update zb examples/work and Java exercises" />
+    <MESSAGE value="feat: add study codes of conditions" />
+    <MESSAGE value="fix: update an exercise of conditions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update an exercise of conditions" />
   </component>
 </project>

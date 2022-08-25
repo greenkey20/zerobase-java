@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="fix: update an exercise of conditions">
-      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch9/Ex9_3.java" afterDir="false" />
+    <list default="true" id="95d90a55-3d97-4fc6-9253-6b973ad7b02b" name="Changes" comment="feat: add study codes of Java exercises">
+      <change afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch9/Ex9_7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_13.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_13.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_14.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/src/JavaJeongseok/exercises/ch4/Ex4_14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/zerobase-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/zerobase-java/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +164,9 @@
       <workItem from="1660855760341" duration="1396000" />
       <workItem from="1661093717162" duration="2207000" />
       <workItem from="1661179726869" duration="983000" />
-      <workItem from="1661339668472" duration="3569000" />
+      <workItem from="1661339668472" duration="4281000" />
+      <workItem from="1661353833157" duration="556000" />
+      <workItem from="1661439208371" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="fix: update .gitignore&#10;feat: add study codes of Java exercices_ch3">
       <created>1659970225086</created>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661180150345</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: add study codes of Java exercises">
+      <created>1661353135029</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1661353135029</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +280,7 @@
     <MESSAGE value="fix: update zb examples/work and Java exercises" />
     <MESSAGE value="feat: add study codes of conditions" />
     <MESSAGE value="fix: update an exercise of conditions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update an exercise of conditions" />
+    <MESSAGE value="feat: add study codes of Java exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add study codes of Java exercises" />
   </component>
 </project>
