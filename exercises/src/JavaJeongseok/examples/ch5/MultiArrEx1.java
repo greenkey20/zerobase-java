@@ -1,7 +1,6 @@
 package exercises.src.JavaJeongseok.examples.ch5;
 
 // 2023.5.17(수) 17h30
-
 import java.util.Arrays;
 import java.util.Scanner;
 
