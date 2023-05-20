@@ -13,7 +13,7 @@ public class View {
     }
 
     void printShowBoard(char[][] showBoard) {
-        for (int i = 0; i < settings.getSIZE(); i++) {
+        for (int i = 0; i < settings.getSize(); i++) {
             System.out.println(showBoard[i]);
         }
     }
