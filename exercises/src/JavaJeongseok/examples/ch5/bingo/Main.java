@@ -23,7 +23,7 @@ public class Main {
         // 2h35 AppConfigurer 사용
         AppConfigurer appConfigurer = new AppConfigurer();
         int firstPlayer = appConfigurer.settings.getFirstPlayer();
-        System.out.println("main() 함수에서 firstPlayer = " + firstPlayer);
+//        System.out.println("main() 함수에서 firstPlayer = " + firstPlayer);
         appConfigurer.game().playGame(firstPlayer);
     }
 }
