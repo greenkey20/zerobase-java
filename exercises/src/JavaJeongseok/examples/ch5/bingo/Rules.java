@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 // 2023.5.19(금) 1h25
-public class GameRules {
+public class Rules {
     // 멤버 변수
 
     private Settings settings;
@@ -14,7 +14,7 @@ public class GameRules {
     private char[][] showBoard;
 
     // 생성자
-    public GameRules(Settings settings, View view) {
+    public Rules(Settings settings, View view) {
         this.settings = settings;
         this.view = view;
         setShowBoard();

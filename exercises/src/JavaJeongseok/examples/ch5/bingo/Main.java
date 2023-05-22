@@ -16,7 +16,7 @@ public class Main {
         Settings settings = new Settings(5);
         int firstPlayer = settings.getFirstPlayer();
 
-        Game game = new Game(new GameRules(settings));
+        Game game = new Game(new Rules(settings));
         game.playGame(firstPlayer);
          */
 

@@ -2,7 +2,7 @@ package exercises.src.JavaJeongseok.examples.ch5.bingo;
 
 import java.util.Set;
 
-import static exercises.src.JavaJeongseok.examples.ch5.bingo.GameRules.exitGame;
+import static exercises.src.JavaJeongseok.examples.ch5.bingo.Rules.exitGame;
 
 // 2023.5.19(금) 1h50
 public class View {
