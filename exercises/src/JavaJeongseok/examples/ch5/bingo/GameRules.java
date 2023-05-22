@@ -56,7 +56,7 @@ public class GameRules {
             userNum = Integer.parseInt(scanner.nextLine());
 
             if (userNum == 0) {
-                view.printShowBoard(showBoard);
+                view.printShowBoard(showBoard); // 사용자가 현재 board를 보고 싶어하는 경우, 보여줌
                 view.printNumsCalled(numsCalled);
                 i--;
             } else if (userNum < 0 || settings.getSize() * settings.getSize() < userNum) {
@@ -129,9 +129,9 @@ public class GameRules {
         isBingo(sb.toString(), bingo.toString(), player);
     }
 
-    void isBingo(String sb, String bingo, char player) {
+    private void isBingo(String sb, String bingo, char player) {
         if (sb.equals(bingo)) {
-            view.printShowBoard(showBoard);
+            view.printShowBoard(showBoard); // bingo인 player가 있어서 게임 종료하기 전 현재 board를 마지막으로 보여줌
             view.printWinner(player);
         }
     }
@@ -139,7 +139,12 @@ public class GameRules {
     void isTie() {
         if (numsCalled.size() == settings.getSize() * settings.getSize()) {
             System.out.println("비겼습니다. 수고하셨습니다!");
-            System.exit(0);
+            exitGame();
         }
+    }
+
+    // 2023.5.22(월) 17h30 나의 질문 = static이 아닌 클래스 안에 static 멤버 메서드 포함 가능한 게 맞나?
+    static void exitGame() {
+        System.exit(0);
     }
 }

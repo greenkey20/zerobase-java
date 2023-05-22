@@ -2,6 +2,8 @@ package exercises.src.JavaJeongseok.examples.ch5.bingo;
 
 import java.util.Set;
 
+import static exercises.src.JavaJeongseok.examples.ch5.bingo.GameRules.exitGame;
+
 // 2023.5.19(금) 1h50
 public class View {
     // 멤버 변수
@@ -25,10 +27,10 @@ public class View {
     void printWinner(char player) {
         if (player == 'X') {
             System.out.println("컴퓨터가 이겼습니다!");
-            System.exit(0);
+            exitGame();
         } else {
             System.out.printf("%s 님이 이겼습니다!\n", settings.getUserName());
-            System.exit(0);
+            exitGame();
         }
     }
 }
