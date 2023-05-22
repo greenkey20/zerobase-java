@@ -13,13 +13,11 @@ import java.util.Set;
  */
 public class Main {
     public static void main(String[] args) {
-        Settings settings = new Settings();
+        Settings settings = new Settings(); // 게임판 및 userName 세팅 포함
         View view = new View(settings);
         Rules rules = new Rules(settings);
 
-        settings.setBoard(); // [Settings]
         view.printBoard(); // [View]
-        settings.setUserName(); // [Settings]
 
         char firstPlayer = settings.getFirstPlayer(); // 이 메서드는 이름 그대로 게임 시작하는 player 정할 때만 호출하면 됨 [Settings]
 
