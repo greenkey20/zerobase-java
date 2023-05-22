@@ -49,12 +49,14 @@ public class Settings {
         }
 
         // 참고용 출력 = 실제 게임 시에는 보여주지 않음 todo
+        /*
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 System.out.printf("%2d  ", this.board[i][j]);
             }
             System.out.println();
         }
+         */
     }
 
     public int[][] getBoard() {
