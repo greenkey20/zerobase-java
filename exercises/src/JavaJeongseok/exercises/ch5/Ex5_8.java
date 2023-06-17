@@ -1,4 +1,4 @@
-package exercises.src.JavaJeongseok.exercises;
+package exercises.src.JavaJeongseok.exercises.ch5;
 
 // 2022.8.12(금) 23h50
 public class Ex5_8 {
