@@ -13,7 +13,7 @@ import java.util.Set;
  */
 public class Main {
     public static void main(String[] args) {
-        Settings settings = new Settings(); // 게임판 및 userName 세팅 포함
+        Settings settings = new Settings(); // 게임판, userName 및 firstPlayer 세팅 포함
         View view = new View(settings);
         Rules rules = new Rules(settings);
 

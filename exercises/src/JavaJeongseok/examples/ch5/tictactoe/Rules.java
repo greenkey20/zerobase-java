@@ -171,7 +171,10 @@ public class Rules {
             int row = Character.getNumericValue(point.charAt(0));
             int column = point.charAt(1) - '0';
 
-            if (point.length() > 2 || row < 1 || settings.getSIZE() < row || column < 1 || settings.getSIZE() < column) {
+            if (point.equals("00")) {
+                System.out.println("게임을 종료합니다"); // ui 요소
+                exitGame();
+            } else if (point.length() > 2 || row < 1 || settings.getSIZE() < row || column < 1 || settings.getSIZE() < column) {
                 System.out.println("잘못된 범위의 행/열 번호를 입력하셨습니다");
                 i--;
             }
