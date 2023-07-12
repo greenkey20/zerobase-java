@@ -57,29 +57,68 @@ public class Calendar {
 //        System.out.println("26 27 28 29 30 31");
     }
 
-    public void printCalendar(int maxDaysOfMonth) {
-        // 월 최대 날짜 수에 따라 달력 그림/출력
-        System.out.println("일  월  화 수  목 금  토");
-        System.out.println("--------------------");
+    public void printCalendar(int year, int month, String day) {
+        // 월 최대 날짜 수에 따라 달력 그림/출력 <- 사용자가 입력한 월의 최대 날짜 수 구해옴
+        int maxDaysOfMonth = getMaxDaysOfMonth(year, month);
+
+        // 요일 문자열을 숫자로 바꿔옴
+        int dayNum = changeStringDayToIntDay(day);
+
+        System.out.printf("  <<%4d년%3d월>>\n", year, month);
+
+        System.out.println(" SU MO TU WE TH FR SA");
+        System.out.println("----------------------");
         for (int i = 1; i <= maxDaysOfMonth; i++) {
             // 1일을 x요일이라고 가정, 1~7(일~월)
-            int day = 3; // 화요일
+//            dayNum = 3; // 화요일
             if (i == 1) {
-                System.out.print(" ".repeat((day - 1) * 3));
+                System.out.print(" ".repeat((dayNum - 1) * 3));
             }
 
-            if (i < 10) {
-                System.out.print(" " + i + " ");
-            } else {
-                System.out.print(i + " ");
-            }
+//            if (i < 10) {
+//                System.out.print(" " + i + " ");
+//            } else {
+//                System.out.print(i + " ");
+//            }
+            System.out.printf("%3d", i);
 
-
-            if (i % 7 == 8 - day) {
+            if (i % 7 == 8 - dayNum) {
                 System.out.println();
             }
         }
 
         System.out.println();
+    }
+
+    // 2023.7.12(수) 22h55
+    public int changeStringDayToIntDay(String day) {
+        int dayNum = 0;
+
+        switch (day) {
+            case "SU":
+                dayNum = 1;
+                break;
+            case "MO":
+                dayNum = 2;
+                break;
+            case "TU":
+                dayNum = 3;
+                break;
+            case "WE":
+                dayNum = 4;
+                break;
+            case "TH":
+                dayNum = 5;
+                break;
+            case "FR":
+                dayNum = 6;
+                break;
+            case "SA":
+                dayNum = 7;
+                break;
+            default:
+        }
+
+        return dayNum;
     }
 }

@@ -14,23 +14,39 @@ public class Prompt {
         Scanner scanner = new Scanner(System.in);
         Calendar cal = new Calendar();
 
+        // 2023.7.12(수) 22h45 추가
+        int year = 0;
         int month = 0;
+        String day = "";
 
         while (true) {
+            System.out.println("연도를 입력하세요 ");
+            System.out.print(PROMPT);
+            year = scanner.nextInt();
+
+            if (year == -1) {
+                break;
+            }
+
             System.out.println("달을 입력하세요 ");
             System.out.print(PROMPT);
             month = scanner.nextInt();
 
-            if (month == -1) {
-                break;
-            } else if (month == 0 || month < -1 || month > 12) {
-                System.out.println("정확한 숫자를 입력해 주세요");
-                continue;
-            }
+//            if (month == -1) {
+//                break;
+//            } else if (month == 0 || month < -1 || month > 12) {
+//                System.out.println("정확한 숫자를 입력해 주세요");
+//                continue;
+//            }
 
-            // 사용자가 입력한 월의 최대 날짜 수 구해옴
-            int maxDaysOfMonth = cal.getMaxDaysOfMonth(2023, month);
-            cal.printCalendar(maxDaysOfMonth);
+            scanner.nextLine();
+
+            System.out.println("1일의/첫번째 요일을 입력하세요(SU, MO, TU, WE, TH, FR, SA) ");
+            System.out.print("DAY > ");
+            day = scanner.nextLine();
+
+            // 2023.7.12(수) 22h45 변경
+            cal.printCalendar(year, month, day);
         } // while문
 
         System.out.println("Bye~");
