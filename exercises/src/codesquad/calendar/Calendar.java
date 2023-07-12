@@ -32,21 +32,45 @@ public class Calendar {
     }
 
     // 2023.7.12(수) 강의 22h15 reference
-    public void printCalendarReference(int year, int month) {
+    public void printCalendarReference(int year, int month, int weekday) {
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
-
         System.out.println(" SU MO TU WE TH FR SA");
         System.out.println("----------------------");
 
-        int maxDay = getMaxDaysOfMonth(year, month);
+        // print blank space
+        for (int i = 0; i < weekday; i++) {
+            System.out.print("   "); // 하나의 요일당 3칸 띄워서 1일을 배치시켜야 함
+        }
 
-        for (int i = 1; i <= maxDay; i++) {
+        int maxDay = getMaxDaysOfMonth(year, month);
+        int count = 7 - weekday;
+        int delim = (count < 7) ? count : 0;
+
+        /*
+        int delim;
+        if (count < 7) {
+            delim = count;
+        } else {
+            delim = 0;
+        }
+         */
+
+        // print 1st line
+        for (int i = 1; i <= count; i++) {
             System.out.printf("%3d", i);
-            if (i % 7 == 0) {
+        }
+        System.out.println();
+
+        // print from 2nd to last line
+        count++;
+        for (int i = count; i <= maxDay; i++) {
+            System.out.printf("%3d", i);
+            if (i % 7 == delim) {
                 System.out.println();
             }
         }
 
+        System.out.println(); // 줄바꿈
         System.out.println(); // 줄바꿈
 
         // hard coding
@@ -82,11 +106,14 @@ public class Calendar {
 //            }
             System.out.printf("%3d", i);
 
-            if (i % 7 == 8 - dayNum) {
+            // 2023.7.12(수) 23h40 버그(dayNum이 1(일요일)일 때 7로 나눈 나머지가 7?!) 수정
+            int delim = (dayNum == 1) ? 0 : 8 - dayNum;
+            if (i % 7 == delim) {
                 System.out.println();
             }
         }
 
+        System.out.println();
         System.out.println();
     }
 
