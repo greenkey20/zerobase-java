@@ -11,10 +11,24 @@ package exercises.src.codesquad.calendar;
  * - 프롬프트 출력
  */
 public class Calendar {
+    // 2023.7.12(수) 22h25 현재 문제점 = 윤년 미 반영
     private static final int[] MAX_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    private static final int[] LEAP_MAX_DAYS = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    public int getMaxDaysOfMonth(int month) {
-        return MAX_DAYS[month - 1];
+    public boolean isLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int getMaxDaysOfMonth(int year, int month) {
+        if (isLeapYear(year)) { // 윤년인 경우, 윤년용 배열 사용
+            return LEAP_MAX_DAYS[month - 1];
+        } else { // 평년인 경우, 평년용 배열 사용
+            return MAX_DAYS[month - 1];
+        }
     }
 
     // 2023.7.12(수) 강의 22h15 reference
@@ -24,7 +38,7 @@ public class Calendar {
         System.out.println(" SU MO TU WE TH FR SA");
         System.out.println("----------------------");
 
-        int maxDay = getMaxDaysOfMonth(month);
+        int maxDay = getMaxDaysOfMonth(year, month);
 
         for (int i = 1; i <= maxDay; i++) {
             System.out.printf("%3d", i);
@@ -35,7 +49,7 @@ public class Calendar {
 
         System.out.println(); // 줄바꿈
 
-            // hard coding
+        // hard coding
 //        System.out.println("          1  2  3  4");
 //        System.out.println(" 5  6  7  8  9 10 11");
 //        System.out.println("12 13 14 15 16 17 18");

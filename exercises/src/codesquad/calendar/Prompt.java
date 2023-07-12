@@ -29,7 +29,7 @@ public class Prompt {
             }
 
             // 사용자가 입력한 월의 최대 날짜 수 구해옴
-            int maxDaysOfMonth = cal.getMaxDaysOfMonth(month);
+            int maxDaysOfMonth = cal.getMaxDaysOfMonth(2023, month);
             cal.printCalendar(maxDaysOfMonth);
         } // while문
 

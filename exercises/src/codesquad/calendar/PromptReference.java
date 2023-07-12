@@ -10,11 +10,19 @@ public class PromptReference {
         Scanner scanner = new Scanner(System.in);
         Calendar cal = new Calendar();
 
-        int month = 0;
+        int year = -1;
+        int month = -1;
 
         while (true) {
+            // 2023.7.12(수) 22h35 추가
+            System.out.println("연도를 입력하세요 ");
+            System.out.print("YEAR > ");
+            year = scanner.nextInt();
+
+//            scanner.hasNextLine(); // 안 써도 되는 것 같네
+
             System.out.println("달을 입력하세요 ");
-            System.out.print(PROMPT);
+            System.out.print("MONTH > ");
             month = scanner.nextInt();
 
             if (month == -1) {
@@ -24,7 +32,7 @@ public class PromptReference {
                 continue;
             }
 
-            cal.printCalendarReference(2023, month);
+            cal.printCalendarReference(year, month);
         } // while문
 
         System.out.println("Bye~");
