@@ -14,13 +14,18 @@ public class Calendar_maxDays1 {
 		System.out.println("19 20 21 22 23 24 25");
 		System.out.println("26 27 28 29 30 31");
 		
-		System.out.println("월을 입력하세요");
+		System.out.print("월을 입력하세요 > ");
 		Scanner scanner = new Scanner(System.in);
+		/*
 		String s;
 		s = scanner.next();
 		
 		int i, j = 0;
 		i = Integer.parseInt(s);
+		 */
+		// 2023.7.12(수) 20h10 수정
+		int i = scanner.nextInt();
+		int j = 0;
 		
 		if (i == 1) {
 				j = 31;
