@@ -1,8 +1,6 @@
 package exercises.src.codesquad.calendar;
 
-// 2023.7.12(수) 21h20
-
-import java.util.Scanner;
+// 2023.7.12(수) 21h20 ~ 21h50 v1 완성
 
 /**
  * [프로그램 조건]
@@ -19,14 +17,30 @@ public class Calendar {
         return MAX_DAYS[month - 1];
     }
 
-    public void printSampleCalendar() {
-        System.out.println("일  월  화 수  목 금  토");
-        System.out.println("--------------------");
-        System.out.println("          1  2  3  4");
-        System.out.println(" 5  6  7  8  9 10 11");
-        System.out.println("12 13 14 15 16 17 18");
-        System.out.println("19 20 21 22 23 24 25");
-        System.out.println("26 27 28 29 30 31");
+    // 2023.7.12(수) 강의 22h15 reference
+    public void printCalendarReference(int year, int month) {
+        System.out.printf("  <<%4d년%3d월>>\n", year, month);
+
+        System.out.println(" SU MO TU WE TH FR SA");
+        System.out.println("----------------------");
+
+        int maxDay = getMaxDaysOfMonth(month);
+
+        for (int i = 1; i <= maxDay; i++) {
+            System.out.printf("%3d", i);
+            if (i % 7 == 0) {
+                System.out.println();
+            }
+        }
+
+        System.out.println(); // 줄바꿈
+
+            // hard coding
+//        System.out.println("          1  2  3  4");
+//        System.out.println(" 5  6  7  8  9 10 11");
+//        System.out.println("12 13 14 15 16 17 18");
+//        System.out.println("19 20 21 22 23 24 25");
+//        System.out.println("26 27 28 29 30 31");
     }
 
     public void printCalendar(int maxDaysOfMonth) {
@@ -53,32 +67,5 @@ public class Calendar {
         }
 
         System.out.println();
-    }
-
-    public static void main(String[] args) {
-        String PROMPT = "cal > ";
-        Scanner scanner = new Scanner(System.in);
-        Calendar cal = new Calendar();
-
-        int month = 0;
-
-        while (true) {
-            System.out.println("달을 입력하세요 ");
-            System.out.print(PROMPT);
-            month = scanner.nextInt();
-
-            if (month == -1) {
-                break;
-            } else if (month == 0 || month < -1 || month > 12) {
-                System.out.println("정확한 숫자를 입력해 주세요");
-                continue;
-            }
-
-            // 사용자가 입력한 월의 최대 날짜 수 구해옴
-            int maxDaysOfMonth = cal.getMaxDaysOfMonth(month);
-            cal.printCalendar(maxDaysOfMonth);
-        } // while문
-
-        System.out.println("Bye~");
     }
 }
