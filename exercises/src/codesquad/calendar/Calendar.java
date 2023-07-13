@@ -17,8 +17,17 @@ public class Calendar {
 
     // 특정 연도의 1월 1일 요일 결정 기준일
     // e.g. 2023.1.1(월) <- 2023.1.1(일) <- 2022.1.1(토) <- 2021.1.1(금)..
-    private static int STANDARD_YEAR = 1985;
-    private static int STANDARD_DAY = 2;
+    private static int STANDARD_YEAR = 0;
+    private static int STANDARD_DAY = 0; // STANDARD_YEAR의 1/1의 요일, 0~6의 값 중 하나
+
+    // 2023.7.13(목) 금일 날짜 및 요일 입력받아 기준 연도 및 해당 년 1/1 세팅하도록 프로그램 수정하며 추가
+    public static void setStandardYear(int standardYear) {
+        STANDARD_YEAR = standardYear;
+    }
+
+    public static void setStandardDay(int standardDay) {
+        STANDARD_DAY = standardDay;
+    }
 
     public boolean isLeapYear(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
@@ -91,7 +100,7 @@ public class Calendar {
         int maxDaysOfMonth = getMaxDaysOfMonth(year, month);
 
         // 요일 문자열을 숫자로 바꿔옴
-        int dayNum = changeStringDayToIntDay(day);
+        int dayNum = changeStringDayToIntDayV1(day);
 
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
 
@@ -123,7 +132,14 @@ public class Calendar {
     }
 
     // 2023.7.12(수) 22h55
-    public int changeStringDayToIntDay(String day) {
+
+    /**
+     * 일~월 -> 1~7
+     *
+     * @param day
+     * @return 1 ~ 7
+     */
+    public int changeStringDayToIntDayV1(String day) {
         int dayNum = 0;
 
         switch (day) {
@@ -147,6 +163,45 @@ public class Calendar {
                 break;
             case "SA":
                 dayNum = 7;
+                break;
+            default:
+        }
+
+        return dayNum;
+    }
+
+    // 2023.7.13(목) 21h30
+
+    /**
+     * 일~월 -> 0~6
+     *
+     * @param day
+     * @return
+     */
+    public int changeStringDayToIntDayV2(String day) {
+        int dayNum = 0;
+
+        switch (day) {
+            case "SU":
+                dayNum = 0;
+                break;
+            case "MO":
+                dayNum = 1;
+                break;
+            case "TU":
+                dayNum = 2;
+                break;
+            case "WE":
+                dayNum = 3;
+                break;
+            case "TH":
+                dayNum = 4;
+                break;
+            case "FR":
+                dayNum = 5;
+                break;
+            case "SA":
+                dayNum = 6;
                 break;
             default:
         }
@@ -253,12 +308,12 @@ public class Calendar {
     }
 
     /**
-     * @param year  달력을 출력하고자 하는 연도
-     * @param month 달력을 출력하고자 하는 월
-     * @param firstDayOfMonth   해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
+     * @param year            달력을 출력하고자 하는 연도
+     * @param month           달력을 출력하고자 하는 월
+     * @param firstDayOfMonth 해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
      */
     public void printCalendarWithIntDay(int year, int month, int firstDayOfMonth) {
-//        System.out.println("firstDayOfMonth = " + day); // todo 매개변수로 받아온, 출력하고자 하는 연/월의 첫번째 날의 요일 값 확인
+//        System.out.println("firstDayOfMonth = " + firstDayOfMonth); // todo 매개변수로 받아온, 출력하고자 하는 연/월의 첫번째 날의 요일 값 확인
         int maxDaysOfMonth = getMaxDaysOfMonth(year, month); // 출력하고자 하는 연/월의 최대 일 수
 
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
@@ -281,5 +336,27 @@ public class Calendar {
 
         System.out.println();
         System.out.println();
+    }
+
+    // 2023.7.13(목) 21h25
+    public void calculateFirstDayOfTodayYear(int todayYear, int todayMonth, int todayDate, String dayInput) {
+//        System.out.println("today = " + todayYear + "년 " + todayMonth + "월 " + todayDate + "일 " + dayInput + "요일"); // todo 매개변수로 받아온, 오늘 날짜 및 요일 확인
+
+        setStandardYear(todayYear);
+        int intDay = changeStringDayToIntDayV2(dayInput);
+
+        int numOfDays = todayDate - 1; // 경과 일자를 구하는 거라서 1 빼줘야 함
+
+        for (int i = 1; i < todayMonth; i++) {
+            numOfDays += getMaxDaysOfMonth(todayYear, i);
+        }
+
+//        System.out.println("numOfDays = " + numOfDays); // todo
+
+        int delim = numOfDays % 7;
+        int firstDayOfYear = intDay < delim ? intDay - delim + 7 : intDay - delim;
+
+        setStandardDay(firstDayOfYear);
+//        System.out.println("STANDARD_YEAR = " + STANDARD_YEAR + ", STANDARD_DAY = " + STANDARD_DAY); // todo
     }
 }

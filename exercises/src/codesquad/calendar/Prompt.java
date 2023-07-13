@@ -19,6 +19,19 @@ public class Prompt {
         int month = 0;
         String day = "";
 
+        // 2023.7.13(목) 오늘 날짜와 요일을 입력받아, 이 정보를 가지고 기준 연도 + 그 해의 1/1 요일을 세팅하여 동작하는 프로그램으로 만들어봄
+        System.out.println("오늘 날짜와 요일을 다음 형식으로 입력하세요 [YYYY-MM-DD 요일(SU, MO, TU, WE, TH, FR, SA 중 하나)]");
+        System.out.print(PROMPT);
+        String todayInput = scanner.nextLine();
+        String dateInput = todayInput.split(" ")[0];
+        String dayInput = todayInput.split(" ")[1];
+
+        int todayYear = Integer.parseInt(dateInput.split("-")[0]);
+        int todayMonth = Integer.parseInt(dateInput.split("-")[1]);
+        int todayDate = Integer.parseInt(dateInput.split("-")[2]);
+
+        cal.calculateFirstDayOfTodayYear(todayYear, todayMonth, todayDate, dayInput);
+
         while (true) {
             System.out.println("연도를 입력하세요 ");
             System.out.print(PROMPT);
@@ -31,6 +44,11 @@ public class Prompt {
             System.out.println("달을 입력하세요 ");
             System.out.print(PROMPT);
             month = scanner.nextInt();
+
+            if (month < 1 || month > 12) {
+                System.out.println("정확한 숫자를 입력해 주세요");
+                continue;
+            }
 
 //            if (month == -1) {
 //                break;
