@@ -26,7 +26,7 @@ public class PromptReference {
 
         int year = 2023;
         int month = 7;
-        int weekday = 0;
+//        int weekday = 0;
 
         while (true) {
             // 2023.7.12(수) 22h35 추가
@@ -50,12 +50,13 @@ public class PromptReference {
                 continue;
             }
 
-            System.out.println("첫째 날의 요일을 입력하세요(su, mo, tu, we, th, fr, sa) ");
-            System.out.print("DAY > ");
-            String weekdayInput = scanner.next();
-            weekday = parseDay(weekdayInput);
+            // 2023.7.13(목) 22h30 reference 강의
+//            System.out.println("첫째 날의 요일을 입력하세요(su, mo, tu, we, th, fr, sa) ");
+//            System.out.print("DAY > ");
+//            String weekdayInput = scanner.next();
+//            weekday = parseDay(weekdayInput);
 
-            cal.printCalendarReference(year, month, weekday);
+            cal.printCalendarReference(year, month);
         } // while문
 
         System.out.println("Bye~");

@@ -15,6 +15,10 @@ public class Calendar {
     private static final int[] MAX_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private static final int[] LEAP_MAX_DAYS = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+    // 2023.7.13(목) 22h55 reference 강의에서 변경
+    private static final int[] MAX_DAYS_REFERENCE = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    private static final int[] LEAP_MAX_DAYS_REFERENCE = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
     // 특정 연도의 1월 1일 요일 결정 기준일
     // e.g. 2023.1.1(월) <- 2023.1.1(일) <- 2022.1.1(토) <- 2021.1.1(금)..
     private static int STANDARD_YEAR = 0;
@@ -45,18 +49,31 @@ public class Calendar {
         }
     }
 
-    // 2023.7.12(수) 강의 22h15 reference
-    public void printCalendarReference(int year, int month, int weekday) {
+    // 2023.7.13(목) 22h55 reference 강의
+    public int getMaxDaysOfMonthReference(int year, int month) {
+        if (isLeapYear(year)) { // 윤년인 경우, 윤년용 배열 사용
+            return LEAP_MAX_DAYS_REFERENCE[month];
+        } else { // 평년인 경우, 평년용 배열 사용
+            return MAX_DAYS_REFERENCE[month];
+        }
+    }
+
+    // 2023.7.12(수) 강의 22h15 reference -> 2023.7.13(목) 22h30 실제 달력 출력 reference 강의
+    public void printCalendarReference(int year, int month) {
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
         System.out.println(" SU MO TU WE TH FR SA");
         System.out.println("----------------------");
+
+        // 2023.7.13(목) 22h25 reference 강의
+        // get weekday automatically
+        int weekday = getWeekdayReference(year, month, 1);
 
         // print blank space
         for (int i = 0; i < weekday; i++) {
             System.out.print("   "); // 하나의 요일당 3칸 띄워서 1일을 배치시켜야 함
         }
 
-        int maxDay = getMaxDaysOfMonth(year, month);
+        int maxDay = getMaxDaysOfMonthReference(year, month);
         int count = 7 - weekday;
         int delim = (count < 7) ? count : 0;
 
@@ -93,6 +110,54 @@ public class Calendar {
 //        System.out.println("12 13 14 15 16 17 18");
 //        System.out.println("19 20 21 22 23 24 25");
 //        System.out.println("26 27 28 29 30 31");
+    }
+
+    // 2023.7.13(목) 22h30 reference 강의
+    public int getWeekdayReference(int year, int month, int day) {
+        // 인터넷 검색을 통해 1970년 1월 1일이 목요일임을 찾음
+        int sYear = 1970;
+//        int sMonth = 1;
+//        int sDay = 1;
+        final int STANDARD_WEEKDAY = 3; // 1970/Jan/1st = Thursday
+
+        int count = 0;
+
+        for (int i = sYear; i < year; i++) {
+            int delta = isLeapYear(i) ? 366 : 365;
+            count += delta;
+        }
+//        System.out.println("count = " + count); // todo
+
+        for (int i = 1; i < month; i++) {
+            int delta = getMaxDaysOfMonthReference(year, i);
+            count += delta;
+        }
+
+        count += day - 1; // 1월1일은 더할 필요 없는 바, 1 뺌
+
+        int weekday = (count + STANDARD_WEEKDAY) % 7;
+        return weekday;
+    }
+
+    // simple test code = 이렇게 main() 만들어서 찍어보는 거 좋은 방법은 아님
+    public static void main(String[] args) {
+        Calendar c = new Calendar();
+        /*
+        System.out.println(c.getWeekdayReference(1970, 5, 1));
+        System.out.println(c.getWeekdayReference(1971, 5, 1));
+        System.out.println(c.getWeekdayReference(1972, 5, 1));
+        System.out.println(c.getWeekdayReference(1973, 5, 1));
+         */
+
+        /*
+        System.out.println(c.getWeekdayReference(1970, 1, 1) == 3);
+//        System.out.println(c.getWeekdayReference(1970, 2, 1) == 31);
+//        System.out.println(c.getWeekdayReference(1970, 3, 1) == 31 + 28);
+        System.out.println(c.getWeekdayReference(1971, 1, 1) == 4);
+        System.out.println(c.getWeekdayReference(1972, 1, 1) == 5);
+        System.out.println(c.getWeekdayReference(1973, 1, 1) == 0);
+        System.out.println(c.getWeekdayReference(1974, 1, 1) == 1);
+         */
     }
 
     public void printCalendarWithStringDay(int year, int month, String day) {
@@ -245,7 +310,7 @@ public class Calendar {
     /**
      * 셸이 호출하는 메서드로써, 출력하고자 하는 연도와 월의 정보를 받아옴
      * -> 출력하고자 하는 연도의 1월 1일의 요일,
-     *    출력하고자 하는 연도의 월의 1일의 요일을 구하는 과정 포함
+     * 출력하고자 하는 연도의 월의 1일의 요일을 구하는 과정 포함
      *
      * @param year
      * @param month
