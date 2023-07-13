@@ -39,14 +39,19 @@ public class Prompt {
 //                continue;
 //            }
 
+            // 2023.7.13(목) 15h40 연도 및 월만 입력받아, 진짜 달력과 똑같은 모양의 달력 출력 <- 날짜 계산 알고리즘 공부/이해 <- 그레고리력, 달력 알고리즘 등 참고
+            /*
             scanner.nextLine();
 
             System.out.println("1일의/첫번째 요일을 입력하세요(SU, MO, TU, WE, TH, FR, SA) ");
             System.out.print("DAY > ");
             day = scanner.nextLine();
+             */
 
             // 2023.7.12(수) 22h45 변경
-            cal.printCalendar(year, month, day);
+//            cal.printCalendarWithStringDay(year, month, day);
+            // 2023.7.13(목) 15h45 추가
+            cal.printRealCalendar(year, month);
         } // while문
 
         System.out.println("Bye~");

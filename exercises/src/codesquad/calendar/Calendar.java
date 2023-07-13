@@ -81,7 +81,7 @@ public class Calendar {
 //        System.out.println("26 27 28 29 30 31");
     }
 
-    public void printCalendar(int year, int month, String day) {
+    public void printCalendarWithStringDay(int year, int month, String day) {
         // 월 최대 날짜 수에 따라 달력 그림/출력 <- 사용자가 입력한 월의 최대 날짜 수 구해옴
         int maxDaysOfMonth = getMaxDaysOfMonth(year, month);
 
@@ -147,5 +147,62 @@ public class Calendar {
         }
 
         return dayNum;
+    }
+
+    // 2023.7.13(목) 15h45 실제 달력 출력
+    public void printRealCalendar(int year, int month) {
+        // 2023.1.1(일) 기준 <- 2023.8.1(화)로부터 212일 전 요일 계산하면 일요일
+        // 일~토요일 0~6으로 표시,
+        int numOfDays = 0;
+        int day = 0;
+        if (year < 2023) {
+            for (int i = 2022; i >= year + 1; i--) {
+                if (!isLeapYear(i)) {
+                    numOfDays += 365;
+                } else {
+                    numOfDays += 366;
+                }
+            }
+
+            for (int i = 12; i >= month; i--) {
+                numOfDays += getMaxDaysOfMonth(year, i);
+            }
+
+            day = numOfDays % 7;
+        }
+
+        System.out.println("numOfDays = " + numOfDays);
+        printCalendarWithIntDay(year, month, day);
+    }
+
+    /**
+     *
+     * @param year 달력을 출력하고자 하는 연도
+     * @param month 달력을 출력하고자 하는 월
+     * @param day 해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
+     */
+    public void printCalendarWithIntDay(int year, int month, int day) {
+        int maxDaysOfMonth = getMaxDaysOfMonth(year, month);
+
+        System.out.printf("  <<%4d년%3d월>>\n", year, month);
+
+        System.out.println(" SU MO TU WE TH FR SA");
+        System.out.println("----------------------");
+
+        for (int i = 0; i < day; i++) {
+            System.out.print("   "); // 3칸 공백
+        }
+
+        for (int i = 1; i <= maxDaysOfMonth; i++) {
+            System.out.printf("%3d", i);
+
+            int delim = 7 - day < 7 ? 7 - day : 0;
+            if (i % 7 == delim) {
+                System.out.println();
+            }
+        }
+
+        System.out.println();
+        System.out.println();;
     }
 }
