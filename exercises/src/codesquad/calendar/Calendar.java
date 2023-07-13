@@ -17,8 +17,8 @@ public class Calendar {
 
     // 특정 연도의 1월 1일 요일 결정 기준일
     // e.g. 2023.1.1(월) <- 2023.1.1(일) <- 2022.1.1(토) <- 2021.1.1(금)..
-    private static final int STANDARD_YEAR = 2023;
-    private static int STANDARD_DAY = 0;
+    private static int STANDARD_YEAR = 1985;
+    private static int STANDARD_DAY = 2;
 
     public boolean isLeapYear(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
@@ -155,6 +155,13 @@ public class Calendar {
     }
 
     // 2023.7.13(목) 15h45 실제 달력 출력
+
+    /**
+     * 이 메서드 짤 때는 전체적인 로직 잘못 생각했음..
+     *
+     * @param year
+     * @param month
+     */
     public void printRealCalendarDraft(int year, int month) {
         // 2023.1.1(일) 기준 <- 2023.8.1(화)로부터 212일 전 요일 계산하면 일요일
         // 일~토요일 0~6으로 표시,
@@ -180,10 +187,20 @@ public class Calendar {
         printCalendarWithIntDay(year, month, day);
     }
 
+    /**
+     * 셸이 호출하는 메서드로써, 출력하고자 하는 연도와 월의 정보를 받아옴
+     * -> 출력하고자 하는 연도의 1월 1일의 요일,
+     *    출력하고자 하는 연도의 월의 1일의 요일을 구하는 과정 포함
+     *
+     * @param year
+     * @param month
+     */
     public void printRealCalendar(int year, int month) {
+        // 출력하고자 하는 연도 1월 1일의 요일을 구함
         int firstDayOfYear = calculateFirstDayOfYear(year);
-        System.out.println("year = " + year + ", firstDayOfYear = " + firstDayOfYear); // todo
+//        System.out.println("year = " + year + ", firstDayOfYear = " + firstDayOfYear); // todo
 
+        // 출력하고자 하는 연도의 특정 월(의 전월)까지의 날짜 수를 구함
         int numOfDays = 0;
 
         for (int i = 1; i < month; i++) {
@@ -191,27 +208,34 @@ public class Calendar {
         }
 //        System.out.println("numOfDays = " + numOfDays); // todo
 
+        // 출력하고자 하는 연도 1월 1일로부터 경과한 날 수를 7로 나눈 나머지로 출력하고자 하는 달의 첫번째 날의 요일을 구함
         int delim = firstDayOfYear + numOfDays % 7;
-        int firstDayOfMonth = delim >= 7 ? delim - 7 : delim;
+        int firstDayOfMonth = delim >= 7 ? delim - 7 : delim; // 출력하고자 하는 달의 첫번째 날의 요일
 
+        // 출력하고자 하는 연도, 달, 1일의 요일 정보를 인자로 전달하여 달력 출력
         printCalendarWithIntDay(year, month, firstDayOfMonth);
     }
 
     /**
+     * 출력하고자 하는 연도 year의 1월 1일의 요일을 구해서 정수 값으로 반환하는 메서드
+     *
      * @param year
      * @return 0 ~ 6(일요일 0 ~ 토요일 6)
      */
     public int calculateFirstDayOfYear(int year) {
         int count = 0;
-        int startYear = year;
-        int endYear = STANDARD_YEAR;
+        int startYear = year; // 출력하고자 하는 연도
+        int endYear = STANDARD_YEAR; // 1/1의 요일을 별도로 입력한 기준 연도
 
-        // e.g. 2023.1.1(일) 기준
+        // 최초 구현 시 기준 = 2023.1.1(일) -> 2023.7.13(목) 20h50 어느 연도의 1월 1일 데이터를 입력해도 동작함
+
+        // 출력하고자 하는 연도가 기준 연도보다 미래인 경우 -> for문용 start/endYear 알맞게 설정 필요
         if (year > STANDARD_YEAR) {
             startYear = STANDARD_YEAR;
             endYear = year;
         }
 
+        // 평년을 지나며 1요일씩 밀림 vs 윤년을 지나며 2요일씩 밀림
         for (int i = startYear; i < endYear; i++) {
             if (isLeapYear(i)) {
                 count += 2;
@@ -221,9 +245,9 @@ public class Calendar {
         }
 
         int delim = count % 7;
-        if (year < STANDARD_YEAR) {
+        if (year < STANDARD_YEAR) { // 출력하고자 하는 연도가 기준 연도보다 과거인 경우 -> x%7만큼의 변화를 STANDARD_DAY에서 빼줘야 함
             return (STANDARD_DAY < delim) ? STANDARD_DAY + 7 - delim : STANDARD_DAY - delim;
-        } else {
+        } else { // 출력하고자 하는 연도가 기준 연도보다 미래인 경우 -> x%7만큼의 변화를 STANDARD_DAY에 더해줘야 함
             return (STANDARD_DAY + delim < 7) ? STANDARD_DAY + delim : STANDARD_DAY + delim - 7;
         }
     }
@@ -231,25 +255,25 @@ public class Calendar {
     /**
      * @param year  달력을 출력하고자 하는 연도
      * @param month 달력을 출력하고자 하는 월
-     * @param day   해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
+     * @param firstDayOfMonth   해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
      */
-    public void printCalendarWithIntDay(int year, int month, int day) {
-        int maxDaysOfMonth = getMaxDaysOfMonth(year, month);
-        System.out.println("firstDayOfMonth = " + day); // todo
+    public void printCalendarWithIntDay(int year, int month, int firstDayOfMonth) {
+//        System.out.println("firstDayOfMonth = " + day); // todo 매개변수로 받아온, 출력하고자 하는 연/월의 첫번째 날의 요일 값 확인
+        int maxDaysOfMonth = getMaxDaysOfMonth(year, month); // 출력하고자 하는 연/월의 최대 일 수
 
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
 
         System.out.println(" SU MO TU WE TH FR SA");
         System.out.println("----------------------");
 
-        for (int i = 0; i < day; i++) {
+        for (int i = 0; i < firstDayOfMonth; i++) {
             System.out.print("   "); // 3칸 공백
         }
 
         for (int i = 1; i <= maxDaysOfMonth; i++) {
             System.out.printf("%3d", i);
 
-            int delim = 7 - day < 7 ? 7 - day : 0;
+            int delim = 7 - firstDayOfMonth < 7 ? 7 - firstDayOfMonth : 0;
             if (i % 7 == delim) {
                 System.out.println();
             }
