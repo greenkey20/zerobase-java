@@ -15,6 +15,11 @@ public class Calendar {
     private static final int[] MAX_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private static final int[] LEAP_MAX_DAYS = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+    // 특정 연도의 1월 1일 요일 결정 기준일
+    // e.g. 2023.1.1(월) <- 2023.1.1(일) <- 2022.1.1(토) <- 2021.1.1(금)..
+    private static final int STANDARD_YEAR = 2023;
+    private static int STANDARD_DAY = 0;
+
     public boolean isLeapYear(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             return true;
@@ -150,7 +155,7 @@ public class Calendar {
     }
 
     // 2023.7.13(목) 15h45 실제 달력 출력
-    public void printRealCalendar(int year, int month) {
+    public void printRealCalendarDraft(int year, int month) {
         // 2023.1.1(일) 기준 <- 2023.8.1(화)로부터 212일 전 요일 계산하면 일요일
         // 일~토요일 0~6으로 표시,
         int numOfDays = 0;
@@ -175,14 +180,62 @@ public class Calendar {
         printCalendarWithIntDay(year, month, day);
     }
 
+    public void printRealCalendar(int year, int month) {
+        int firstDayOfYear = calculateFirstDayOfYear(year);
+        System.out.println("year = " + year + ", firstDayOfYear = " + firstDayOfYear); // todo
+
+        int numOfDays = 0;
+
+        for (int i = 1; i < month; i++) {
+            numOfDays += getMaxDaysOfMonth(year, i);
+        }
+//        System.out.println("numOfDays = " + numOfDays); // todo
+
+        int delim = firstDayOfYear + numOfDays % 7;
+        int firstDayOfMonth = delim >= 7 ? delim - 7 : delim;
+
+        printCalendarWithIntDay(year, month, firstDayOfMonth);
+    }
+
     /**
-     *
-     * @param year 달력을 출력하고자 하는 연도
+     * @param year
+     * @return 0 ~ 6(일요일 0 ~ 토요일 6)
+     */
+    public int calculateFirstDayOfYear(int year) {
+        int count = 0;
+        int startYear = year;
+        int endYear = STANDARD_YEAR;
+
+        // e.g. 2023.1.1(일) 기준
+        if (year > STANDARD_YEAR) {
+            startYear = STANDARD_YEAR;
+            endYear = year;
+        }
+
+        for (int i = startYear; i < endYear; i++) {
+            if (isLeapYear(i)) {
+                count += 2;
+            } else {
+                count++;
+            }
+        }
+
+        int delim = count % 7;
+        if (year < STANDARD_YEAR) {
+            return (STANDARD_DAY < delim) ? STANDARD_DAY + 7 - delim : STANDARD_DAY - delim;
+        } else {
+            return (STANDARD_DAY + delim < 7) ? STANDARD_DAY + delim : STANDARD_DAY + delim - 7;
+        }
+    }
+
+    /**
+     * @param year  달력을 출력하고자 하는 연도
      * @param month 달력을 출력하고자 하는 월
-     * @param day 해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
+     * @param day   해당 월의 1번째 날의 요일, 0 ~ 6(일요일 ~ 토요일)
      */
     public void printCalendarWithIntDay(int year, int month, int day) {
         int maxDaysOfMonth = getMaxDaysOfMonth(year, month);
+        System.out.println("firstDayOfMonth = " + day); // todo
 
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
 
@@ -203,6 +256,6 @@ public class Calendar {
         }
 
         System.out.println();
-        System.out.println();;
+        System.out.println();
     }
 }
