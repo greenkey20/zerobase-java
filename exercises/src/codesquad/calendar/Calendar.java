@@ -66,7 +66,7 @@ public class Calendar {
 
         // 2023.7.13(목) 22h25 reference 강의
         // get weekday automatically
-        int weekday = getWeekdayReference(year, month, 1);
+        int weekday = getWeekdayReference(year, month, 1); // 2023.7.13(목) 23h15 나의 질문 = 왜 day 1로 호출하지? -> 나의 생각 = 출력하고자 하는 년/월의 1일 요일을 구해야 하는 거니까?!
 
         // print blank space
         for (int i = 0; i < weekday; i++) {
@@ -133,7 +133,7 @@ public class Calendar {
             count += delta;
         }
 
-        count += day - 1; // 1월1일은 더할 필요 없는 바, 1 뺌
+        count += day; // 1월1일은 더할 필요 없는 바, 1 뺌 -> 2023.7.13(목) 23h5 논리적 오류 debugging 시 1 빼면 안 된다고 하심(이유는 각자 생각해보기)
 
         int weekday = (count + STANDARD_WEEKDAY) % 7;
         return weekday;
