@@ -1,4 +1,4 @@
-package exercises.src.codesquad.calendar;
+package exercises.src.codesquad.calendar.maxdays;
 
 import java.util.Scanner;
 

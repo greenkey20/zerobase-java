@@ -1,4 +1,4 @@
-package exercises.src.codesquad.timesquare;
+package exercises.src.codesquad.calendar.timesquare;
 
 // 2023.7.12(수) 17h30 ~ 17h55 의도한 대로 완성
 public class TimeSquareMain {

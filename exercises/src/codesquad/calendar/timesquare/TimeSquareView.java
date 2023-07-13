@@ -1,4 +1,4 @@
-package exercises.src.codesquad.timesquare;
+package exercises.src.codesquad.calendar.timesquare;
 
 import java.util.Scanner;
 

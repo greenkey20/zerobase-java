@@ -1,7 +1,5 @@
-package exercises.src.codesquad.calendar;
+package exercises.src.codesquad.calendar.maxdays;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 // 2023.7.12(수) 21h5
