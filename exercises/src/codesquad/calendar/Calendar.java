@@ -329,8 +329,9 @@ public class Calendar {
 //        System.out.println("numOfDays = " + numOfDays); // todo
 
         // 출력하고자 하는 연도 1월 1일로부터 경과한 날 수를 7로 나눈 나머지로 출력하고자 하는 달의 첫번째 날의 요일을 구함
-        int delim = firstDayOfYear + numOfDays % 7;
-        int firstDayOfMonth = delim >= 7 ? delim - 7 : delim; // 출력하고자 하는 달의 첫번째 날의 요일
+//        int delim = firstDayOfYear + numOfDays % 7;
+//        int firstDayOfMonth = delim >= 7 ? delim - 7 : delim; // 출력하고자 하는 달의 첫번째 날의 요일
+        int firstDayOfMonth = (firstDayOfYear + numOfDays + 7) % 7;
 
         // 출력하고자 하는 연도, 달, 1일의 요일 정보를 인자로 전달하여 달력 출력
         printCalendarWithIntDay(year, month, firstDayOfMonth);
@@ -366,9 +367,11 @@ public class Calendar {
 
         int delim = count % 7;
         if (year < STANDARD_YEAR) { // 출력하고자 하는 연도가 기준 연도보다 과거인 경우 -> x%7만큼의 변화를 STANDARD_DAY에서 빼줘야 함
-            return (STANDARD_DAY < delim) ? STANDARD_DAY + 7 - delim : STANDARD_DAY - delim;
+//            return (STANDARD_DAY < delim) ? STANDARD_DAY + 7 - delim : STANDARD_DAY - delim;
+            return (STANDARD_DAY - delim + 7) % 7;
         } else { // 출력하고자 하는 연도가 기준 연도보다 미래인 경우 -> x%7만큼의 변화를 STANDARD_DAY에 더해줘야 함
-            return (STANDARD_DAY + delim < 7) ? STANDARD_DAY + delim : STANDARD_DAY + delim - 7;
+//            return (STANDARD_DAY + delim < 7) ? STANDARD_DAY + delim : STANDARD_DAY + delim - 7;
+            return (STANDARD_DAY + delim + 7) % 7;
         }
     }
 
@@ -418,8 +421,12 @@ public class Calendar {
 
 //        System.out.println("numOfDays = " + numOfDays); // todo
 
+        /*
         int delim = numOfDays % 7;
         int firstDayOfYear = intDay < delim ? intDay - delim + 7 : intDay - delim;
+         */
+        // 2023.7.13(목) 23h20 reference 강의 본 다음 수정해봄 -> 더 간단하게 처리할 수 있네.. 0보다 작든 크든 7을 더하면 변동 없으니까.. 패턴 생각할 때 좀 크게 볼걸..
+        int firstDayOfYear = (intDay - numOfDays + 7) % 7;
 
         setStandardDay(firstDayOfYear);
 //        System.out.println("STANDARD_YEAR = " + STANDARD_YEAR + ", STANDARD_DAY = " + STANDARD_DAY); // todo

@@ -33,7 +33,7 @@ public class Prompt {
         cal.calculateFirstDayOfTodayYear(todayYear, todayMonth, todayDate, dayInput);
 
         while (true) {
-            System.out.println("연도를 입력하세요 ");
+            System.out.println("연도를 입력하세요 [exit = -1] ");
             System.out.print(PROMPT);
             year = scanner.nextInt();
 
