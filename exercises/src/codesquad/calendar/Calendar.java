@@ -2,6 +2,8 @@ package exercises.src.codesquad.calendar;
 
 // 2023.7.12(수) 21h20 ~ 21h50 v1 완성
 
+import exercises.src.codesquad.scheduler.Scheduler;
+
 /**
  * [프로그램 조건]
  * - 월을 입력하면 해당 월의 달력 출력
@@ -19,9 +21,12 @@ public class Calendar {
     private static final int[] MAX_DAYS_REFERENCE = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private static final int[] LEAP_MAX_DAYS_REFERENCE = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+    // 2023.7.14(금) 13h20
+    private static Scheduler scheduler = new Scheduler();
+
     // 특정 연도의 1월 1일 요일 결정 기준일
-    // e.g. 2023.1.1(월) <- 2023.1.1(일) <- 2022.1.1(토) <- 2021.1.1(금)..
-    private static int STANDARD_YEAR = 0;
+    // e.g. 2024.1.1(월) <- 2023.1.1(일) <- 2022.1.1(토) <- 2021.1.1(금)..
+    private static int STANDARD_YEAR = 2023;
     private static int STANDARD_DAY = 0; // STANDARD_YEAR의 1/1의 요일, 0~6의 값 중 하나
 
     // 2023.7.13(목) 금일 날짜 및 요일 입력받아 기준 연도 및 해당 년 1/1 세팅하도록 프로그램 수정하며 추가
@@ -118,7 +123,7 @@ public class Calendar {
         int sYear = 1970;
 //        int sMonth = 1;
 //        int sDay = 1;
-        final int STANDARD_WEEKDAY = 3; // 1970/Jan/1st = Thursday
+        final int STANDARD_WEEKDAY = 4; // 1970/Jan/1st = Thursday
 
         int count = 0;
 
@@ -133,7 +138,7 @@ public class Calendar {
             count += delta;
         }
 
-        count += day; // 1월1일은 더할 필요 없는 바, 1 뺌 -> 2023.7.13(목) 23h5 논리적 오류 debugging 시 1 빼면 안 된다고 하심(이유는 각자 생각해보기)
+        count += day - 1; // 1월1일은 더할 필요 없는 바, 1 뺌 -> 2023.7.13(목) 23h5 논리적 오류 debugging 시 1 빼면 안 된다고 하심(이유는 각자 생각해보기) -> 2023.7.13(목) 23h55 다음 강에서 수정 = 빼는 게 맞음 + 1970년 1월 1일 4요일이었어야 함
 
         int weekday = (count + STANDARD_WEEKDAY) % 7;
         return weekday;
@@ -386,15 +391,20 @@ public class Calendar {
 
         System.out.printf("  <<%4d년%3d월>>\n", year, month);
 
-        System.out.println(" SU MO TU WE TH FR SA");
+        System.out.println("SU MO TU WE TH FR SA");
         System.out.println("----------------------");
 
         for (int i = 0; i < firstDayOfMonth; i++) {
             System.out.print("   "); // 3칸 공백
         }
 
+        // 2023.7.14(금) 13h30
         for (int i = 1; i <= maxDaysOfMonth; i++) {
-            System.out.printf("%3d", i);
+            if (scheduler.hasSchedule(year, month, i)) {
+                System.out.printf("%2d.", i);
+            } else {
+                System.out.printf("%2d ", i);
+            }
 
             int delim = 7 - firstDayOfMonth < 7 ? 7 - firstDayOfMonth : 0;
             if (i % 7 == delim) {
