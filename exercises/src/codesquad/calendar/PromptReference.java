@@ -20,6 +20,7 @@ public class PromptReference {
      * @return 0 ~ 6 (0 = Sunday, 6 = Saturday)
      */
     public int parseDay(String weekdayInput) {
+        /*
         if (weekdayInput.equals("su")) return 0;
         else if (weekdayInput.equals("mo")) return 1;
         else if (weekdayInput.equals("tu")) return 2;
@@ -28,6 +29,27 @@ public class PromptReference {
         else if (weekdayInput.equals("fr")) return 5;
         else if (weekdayInput.equals("sa")) return 6;
         else return 0; // 혹시 이상한 입력 들어오면 일요일로 간주하기로 함
+         */
+
+        // 2023.7.14(금) 21h String에 대한 switch문으로 refactoring
+        switch (weekdayInput) {
+            case "su":
+                return 0; // return이 함수 탈출하는 것인 바, break 필요 없음
+            case "mo":
+                return 1;
+            case "tu":
+                return 2;
+            case "we":
+                return 3;
+            case "th":
+                return 4;
+            case "fr":
+                return 5;
+            case "sa":
+                return 6;
+            default:
+                return 0;
+        }
     }
 
     public void runPrompt() throws ParseException {
@@ -36,15 +58,44 @@ public class PromptReference {
         Scanner scanner = new Scanner(System.in);
         Calendar cal = new Calendar();
 
+        boolean isLoop = true;
+
         while (true) {
             // 2023.7.14(금) 17h30 일정표 기능 추가
             System.out.print("명령 (1, 2, 3, h, q) > ");
             String command = scanner.next();
+            /*
             if (command.equals("1")) commandRegister(scanner, cal);
             else if (command.equals("2")) commandSearch(scanner, cal);
             else if (command.equals("3")) commandCalendar(scanner, cal);
             else if (command.equals("h")) printMenu();
             else if (command.equals("q")) break;
+             */
+
+            // 2023.7.14(금) 21h10 String에 대한 switch문으로 refactoring
+            switch (command) {
+                case "1":
+                    commandRegister(scanner, cal);
+                    break;
+                case "2":
+                    commandSearch(scanner, cal);
+                    break;
+                case "3":
+                    commandCalendar(scanner, cal);
+                    break;
+                case "h":
+                    printMenu();
+                    break;
+                case "q":
+                    isLoop = false;
+                    break; // 이 break는 switch문(o) 이를 감싸고 있는 while문(x)을 빠져나가는 것
+                default:
+                    break;
+            }
+
+            if (!isLoop) {
+                break;
+            }
         } // while문
 
         System.out.println("Thank you. Bye~");
