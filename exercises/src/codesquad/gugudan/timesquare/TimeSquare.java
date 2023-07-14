@@ -1,4 +1,4 @@
-package exercises.src.codesquad.calendar.timesquare;
+package exercises.src.codesquad.gugudan.timesquare;
 
 public class TimeSquare {
     public int[] calculate(int index, int number) {
