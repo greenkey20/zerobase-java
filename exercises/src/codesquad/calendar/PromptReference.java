@@ -145,14 +145,13 @@ public class PromptReference {
         System.out.print("날짜를 입력해 주세요 (yyyy-MM-dd) > ");
         String date = scanner.next();
 
-        String plan = "";
-        try {
-            plan = calendar.searchPlan(date);
-        } catch (ParseException e) {
-            System.err.println("일정 검색 중 오류가 발생했습니다");
-            throw new RuntimeException(e);
+        PlanItem planItem;
+        planItem = calendar.searchPlan(date);
+        if (planItem != null) {
+            System.out.println("plan = " + planItem.getDetail());
+        } else {
+            System.out.println("일정이 없습니다");
         }
-        System.out.println("plan = " + plan);
     }
 
     private void commandRegister(Scanner scanner, Calendar calendar) throws ParseException {

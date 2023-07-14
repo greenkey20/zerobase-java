@@ -27,7 +27,7 @@ public class Calendar {
     private static final int[] LEAP_MAX_DAYS_REFERENCE = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     // 2023.7.14(금) 20h30 reference 강의
-    private HashMap<Date, String> planMap; // 생성자 호출 시 초기화해줘야 함
+    private HashMap<Date, PlanItem> planMap; // 생성자 호출 시 초기화해줘야 함
 
     public Calendar() {
         planMap = new HashMap<>();
@@ -460,29 +460,34 @@ public class Calendar {
 
     /**
      * 일정 등록하는 메서드
+     *
      * @param strDate e.g. "2023-07-14"
      * @param plan
      * @throws ParseException
      */
-    public void registerPlan(String strDate, String plan) throws ParseException { // exception 처리/handling을 내가 함(x) 해달라고 나/내 메서드를 호출한 쪽으로 넘김(o)
+    public void registerPlan(String strDate, String plan) /*throws ParseException*/ { // exception 처리/handling을 내가 함(x) 해달라고 나/내 메서드를 호출한 쪽으로 넘김(o)
         // -> 원래는 예외 처리 잘 해줘야 함 + 이 메서드 호출한 곳의 호출한 곳..까지 throws 해야 하므로, 여기서 try~ catch.. 하는 게 좋았을 것 같음
-        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
+//        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
 //        System.out.println("parsed date = " + date); // todo
 
+        // 2023.7.14(금) 21h25 PlanItem 클래스 만들어 구현
+        PlanItem planItem = new PlanItem(strDate, plan);
+
         // 일정 저장하고 검색해야 함 -> 검색 시 Hashtable이나 HashMap 사용
-        planMap.put(date, plan);
+        planMap.put(planItem.getPlanDate(), planItem);
     }
 
     // 2023.7.14(금) 20h35 reference 강의
+
     /**
      * 일정 검색하는 메서드
+     *
      * @param strDate
      * @return
      * @throws ParseException
      */
-    public String searchPlan(String strDate) throws ParseException {
-        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
-        String plan = planMap.get(date);
-        return plan;
+    public PlanItem searchPlan(String strDate) {
+        Date date = PlanItem.getDateFromString(strDate);
+        return planMap.get(date);
     }
 }
