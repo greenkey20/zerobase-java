@@ -4,6 +4,11 @@ package exercises.src.codesquad.calendar;
 
 import exercises.src.codesquad.scheduler.Scheduler;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+
 /**
  * [프로그램 조건]
  * - 월을 입력하면 해당 월의 달력 출력
@@ -21,7 +26,14 @@ public class Calendar {
     private static final int[] MAX_DAYS_REFERENCE = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private static final int[] LEAP_MAX_DAYS_REFERENCE = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    // 2023.7.14(금) 13h20
+    // 2023.7.14(금) 20h30 reference 강의
+    private HashMap<Date, String> planMap; // 생성자 호출 시 초기화해줘야 함
+
+    public Calendar() {
+        planMap = new HashMap<>();
+    }
+
+    // 2023.7.14(금) 13h20 나 스스로 실습 시 추가
     private static Scheduler scheduler = new Scheduler();
 
     // 특정 연도의 1월 1일 요일 결정 기준일
@@ -145,7 +157,7 @@ public class Calendar {
     }
 
     // simple test code = 이렇게 main() 만들어서 찍어보는 거 좋은 방법은 아님
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Calendar c = new Calendar();
         /*
         System.out.println(c.getWeekdayReference(1970, 5, 1));
@@ -154,15 +166,17 @@ public class Calendar {
         System.out.println(c.getWeekdayReference(1973, 5, 1));
          */
 
-        /*
-        System.out.println(c.getWeekdayReference(1970, 1, 1) == 3);
+        System.out.println(c.getWeekdayReference(1970, 1, 1) == 4);
 //        System.out.println(c.getWeekdayReference(1970, 2, 1) == 31);
 //        System.out.println(c.getWeekdayReference(1970, 3, 1) == 31 + 28);
-        System.out.println(c.getWeekdayReference(1971, 1, 1) == 4);
-        System.out.println(c.getWeekdayReference(1972, 1, 1) == 5);
-        System.out.println(c.getWeekdayReference(1973, 1, 1) == 0);
-        System.out.println(c.getWeekdayReference(1974, 1, 1) == 1);
-         */
+        System.out.println(c.getWeekdayReference(1971, 1, 1) == 5);
+        System.out.println(c.getWeekdayReference(1972, 1, 1) == 6);
+        System.out.println(c.getWeekdayReference(1973, 1, 1) == 1);
+        System.out.println(c.getWeekdayReference(1974, 1, 1) == 2);
+
+        // 2023.7.14(금) 20h25 test
+        c.registerPlan("2023-07-14", "AI conference day2"); // 이 메서드 호출한 쪽(여기)으로 예외 처리 넘긴 바, 여기서(도) Parse exception 예외 처리 필요 -> parsed date = Fri Jul 14 00:00:00 KST 2023
+        System.out.println(c.searchPlan("2023-07-14").equals("AI conference day2"));
     }
 
     public void printCalendarWithStringDay(int year, int month, String day) {
@@ -440,5 +454,35 @@ public class Calendar {
 
         setStandardDay(firstDayOfYear);
 //        System.out.println("STANDARD_YEAR = " + STANDARD_YEAR + ", STANDARD_DAY = " + STANDARD_DAY); // todo
+    }
+
+    // 2023.7.14(금) 17h55 reference 강의
+
+    /**
+     * 일정 등록하는 메서드
+     * @param strDate e.g. "2023-07-14"
+     * @param plan
+     * @throws ParseException
+     */
+    public void registerPlan(String strDate, String plan) throws ParseException { // exception 처리/handling을 내가 함(x) 해달라고 나/내 메서드를 호출한 쪽으로 넘김(o)
+        // -> 원래는 예외 처리 잘 해줘야 함 + 이 메서드 호출한 곳의 호출한 곳..까지 throws 해야 하므로, 여기서 try~ catch.. 하는 게 좋았을 것 같음
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
+//        System.out.println("parsed date = " + date); // todo
+
+        // 일정 저장하고 검색해야 함 -> 검색 시 Hashtable이나 HashMap 사용
+        planMap.put(date, plan);
+    }
+
+    // 2023.7.14(금) 20h35 reference 강의
+    /**
+     * 일정 검색하는 메서드
+     * @param strDate
+     * @return
+     * @throws ParseException
+     */
+    public String searchPlan(String strDate) throws ParseException {
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(strDate);
+        String plan = planMap.get(date);
+        return plan;
     }
 }

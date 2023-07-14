@@ -132,11 +132,12 @@ public class Prompt {
                     showMenu();
                     break;
                 case "q":
-                    System.out.println("Bye~");
+                    System.out.println("Thank you. Bye~");
+                    scanner.close();
                     return;
             } // switch문
         } // while문
-    }
+    } // runPrompt() 메서드 종료
 
     public void showMenu() {
         System.out.println("+----------------------+");
